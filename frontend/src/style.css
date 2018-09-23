@@ -1,0 +1,67 @@
+body {
+	margin: 0;
+}
+
+html {
+	overflow: hidden;
+}
+
+.toolbox {
+	position: absolute;
+	top: 0;
+}
+
+.toolbox .hide-on-shrink {
+	visibility: hidden;
+}
+.toolbox.open .hide-on-shrink {
+	visibility: visible;
+}
+
+.toolbox .brushes {
+	list-style: none;
+	margin: 4px;
+	padding: 0;
+}
+
+.toolbox .brushes > li {
+	margin-left: 0;
+	padding-left: 0;
+	color: #dfdfdf;
+}
+
+.toolbox .brushes > li.current {
+	color: #dddddd;
+}
+.toolbox .brushes > li.current::before {
+	content: "[";
+}
+.toolbox .brushes > li.current::after {
+	content: "]";
+}
+
+.toolbox #colors {
+	border-spacing: 4px;
+	border-color: transparent;
+}
+.toolbox #colors td {
+	width: 32px;
+	height: 32px;
+}
+
+input[type="color"] {
+	width: 32px;
+	height: 32px;
+	border: none;
+	padding: 0;
+	outline: none;
+	background: transparent;
+	margin: 4px;
+	box-shadow: 0px 1px 16px -4px rgba(0, 0, 0, 0.5);
+}
+input[type="color"]::-webkit-color-swatch-wrapper {
+	padding: 0;
+}
+input[type="color"]::-webkit-color-swatch {
+	border: none;
+}
